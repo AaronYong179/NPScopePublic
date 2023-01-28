@@ -37,33 +37,24 @@
     <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="NPScope-User-Guide" data-id="NPScope-User-Guide"><a class="anchor hidden-xs" href="#NPScope-User-Guide" title="NPScope-User-Guide"><span class="octicon octicon-link"></span></a><span>NPScope User Guide</span></h1><h2 id="Quick-Start" data-id="Quick-Start"><a class="anchor hidden-xs" href="#Quick-Start" title="Quick-Start"><span class="octicon octicon-link"></span></a><span>Quick Start</span></h2><ol>
 <li><span>Switch on the camera and ensure that sample details are entered on the relevant </span><a href="#Google-Sheets"><span>Google Sheets</span></a><span>.</span></li>
 <li><span>Start the NPScope desktop application by double-clicking on </span><code>NPScope_v4</code><span> on the </span><code>Desktop</code><span>.</span></li>
+<li><span>A filedialog will automatically appear. Select the relevant </span><a href="#Folder-Choice"><span>parent folder</span></a><span>. You should see a confirmation message being logged in the </span><code>Events Log</code></li>
 <li><span>Select the correct Sample Type and ID then click </span><code>Confirm sample details</code><span>. You should see a confirmation message being logged in the </span><code>Events Log</code><span>.</span></li>
 <li><span>Click </span><code>Live</code><span> to start live imaging, </span><code>Snap</code><span> to capture the desired frame, and </span><code>Save</code><span> to save the image.</span></li>
-</ol><h2 id="Widgets" data-id="Widgets"><a class="anchor hidden-xs" href="#Widgets" title="Widgets"><span class="octicon octicon-link"></span></a><span>Widgets</span></h2><h3 id="Settings-Menu" data-id="Settings-Menu"><a class="anchor hidden-xs" href="#Settings-Menu" title="Settings-Menu"><span class="octicon octicon-link"></span></a><span>Settings Menu</span></h3><p><img src="https://drive.google.com/uc?export=view&amp;id=1qTmxGxSTu6D6TYuqCXuHfwcgYYf7KS9W" alt="Figure 1" loading="lazy"></p><ul>
+<li><span>Keyboard shortcuts:</span>
+<ul>
+<li><code>&lt;F1&gt;</code><span> for </span><code>Live</code></li>
+<li><code>&lt;F2&gt;</code><span> for </span><code>Snap</code></li>
+<li><code>&lt;F3&gt;</code><span> for </span><code>Save</code></li>
+</ul>
+</li>
+</ol><h2 id="Widgets" data-id="Widgets"><a class="anchor hidden-xs" href="#Widgets" title="Widgets"><span class="octicon octicon-link"></span></a><span>Widgets</span></h2><h3 id="Settings-Menu" data-id="Settings-Menu"><a class="anchor hidden-xs" href="#Settings-Menu" title="Settings-Menu"><span class="octicon octicon-link"></span></a><span>Settings Menu</span></h3><p><img src="https://drive.google.com/uc?export=view&amp;id=1Dj-HT4VcbOvaNqJqMPsmuMXAoy2ch373" alt="Figure 1" loading="lazy"></p><ul>
 <li>
 <p><strong><span>Set Output Path</span></strong></p>
 <ul>
-<li><span>Sets the output path for all images saved by NPScope. By default, images will be saved in a folder called </span><code>NPScopeOutput</code><span> in the </span><a href="#Synology-FileStation"><span>Synology FileStation</span></a><span>.</span></li>
-<li><span>Select the relevant parent folder on Synology. For example, a sample for the 20k study should be placed within the folder titled </span><code>EBV20k</code><span>.</span></li>
-<li><span>For example, the default folder structure would be:</span><pre><code>./NPScopeOutput/
-    230101/
-        230101-CTL-0000-01.tif
-        230101-CTL-0000-02.tif
-        .
-        .
-        .
-</code></pre>
-</li>
-<li><span>Changing the output folder via </span><code>Set Output Path</code><span> to “MyCustomFolder” only changes the parent folder:</span><pre><code>./MyCustomFolder/
-    230101/
-        230101-CTL-0000-01.tif
-        230101-CTL-0000-02.tif
-        .
-        .
-        .
-</code></pre>
-</li>
-<li><span>Note therefore that the date-based naming (</span><code>YYMMDD</code><span>) of the nested folders is forced. This is to ensure compatibility with the auto image analysis pipeline (</span><em><span>still in development</span></em><span>).</span></li>
+<li><span>Sets the output path for all images saved by NPScope.</span></li>
+<li><span>A prompt to set the output path should already be given when NPScope starts. However, if an amendment is required, it can be done within this submenu.</span></li>
+<li><span>Select the relevant parent folder on Synology. For example, images for the 20k study should be placed within the folder titled </span><code>EBV20k</code><span>. Read about this in more detail </span><a href="#Folder-Choice"><span>here</span></a><span>.</span></li>
+<li><span>The set output path will be logged on the </span><code>Events Log</code><span> widget. Verify that the location is correct before proceeding with image acquisition.</span></li>
 </ul>
 </li>
 <li>
@@ -73,17 +64,25 @@
 <li><span>In previous versions of NPScope, a camera-bound error would require a hard restart of the entire app. In this version, simply click </span><code>Reset Camera</code><span> and wait for a notification to appear.</span></li>
 <li><span>If an error notification appears, simply restart the camera and try again.</span></li>
 </ul>
-<p><img src="https://drive.google.com/uc?export=view&amp;id=1Y0HOT_fPhshXNVcc7MkGUAmB9FZRdwnW" alt="Figure 2" loading="lazy"></p>
+<p><img src="https://drive.google.com/uc?export=view&amp;id=1mK36oBGa9ilC71e3kA8Rf1MpmYiqkibM" alt="Figure 2" loading="lazy"></p>
 <ul>
 <li><span>Otherwise, a success notification will appear. Simply click </span><code>OK</code><span> and use NPScope as usual.</span></li>
 </ul>
-<p><img src="https://drive.google.com/uc?export=view&amp;id=1onVE3-1mEHPISVhebf_KQ-evcjqvznGZ" alt="Figure 3" loading="lazy"></p>
+<p><img src="https://drive.google.com/uc?export=view&amp;id=1aB_luxna2AEJ9_zK1puo9SsHnT-iD23F" alt="Figure 3" loading="lazy"></p>
 </li>
-</ul><h3 id="Input-sample-details" data-id="Input-sample-details"><a class="anchor hidden-xs" href="#Input-sample-details" title="Input-sample-details"><span class="octicon octicon-link"></span></a><span>Input sample details</span></h3><p><img src="https://drive.google.com/uc?export=view&amp;id=1_9R7NxpD0J-7Ln4egbNzJhSoq4LcmDgv" alt="Figure 4" loading="lazy"></p><ul>
+</ul><h3 id="Help-Menu" data-id="Help-Menu"><a class="anchor hidden-xs" href="#Help-Menu" title="Help-Menu"><span class="octicon octicon-link"></span></a><span>Help Menu</span></h3><ul>
+<li>
+<p><strong><span>User Guide</span></strong></p>
+<ul>
+<li><span>Opens this user guide in the default web browser. The user guide will be updated alongside any changes made to NPScope, so please consult this guide if there are any queries.</span></li>
+</ul>
+<p><img src="https://drive.google.com/uc?export=view&amp;id=1wop5yNlRah2BPelKbJHdJdeMLAeU0O8C" alt="Figure 3.1" loading="lazy"></p>
+</li>
+</ul><h3 id="Input-sample-details" data-id="Input-sample-details"><a class="anchor hidden-xs" href="#Input-sample-details" title="Input-sample-details"><span class="octicon octicon-link"></span></a><span>Input sample details</span></h3><p><img src="https://drive.google.com/uc?export=view&amp;id=1yr3HpjRh3bv7QWTa0MgzOWerd398_oVa" alt="Figure 4" loading="lazy"></p><ul>
 <li>
 <p><strong><span>Sample Type</span></strong></p>
 <ul>
-<li><span>Choose the appropriate sample type. There are only two values: </span><code>Control</code><span> or </span><code>Patient</code></li>
+<li><span>Choose the appropriate sample type. There are only two values: </span><code>Control</code><span> or </span><code>Patient</code><span>.</span></li>
 </ul>
 </li>
 <li>
@@ -102,19 +101,20 @@
 <li><span>A confirmation message will be logged on the </span><code>Events Log</code><span> widget. Verify that the sample details are correct before proceeding with image acquisition.</span></li>
 </ul>
 </li>
-</ul><h3 id="Main-Workflow" data-id="Main-Workflow"><a class="anchor hidden-xs" href="#Main-Workflow" title="Main-Workflow"><span class="octicon octicon-link"></span></a><span>Main Workflow</span></h3><p><img src="https://drive.google.com/uc?export=view&amp;id=1ssDMU1ZHW5G7_QzuO30yU6yoElNRXGEg" alt="Figure5" loading="lazy"></p><ul>
+</ul><h3 id="Main-Workflow" data-id="Main-Workflow"><a class="anchor hidden-xs" href="#Main-Workflow" title="Main-Workflow"><span class="octicon octicon-link"></span></a><span>Main Workflow</span></h3><p><img src="https://drive.google.com/uc?export=view&amp;id=1EEPJPm8TJ8SjZPnIrNkK4grse1NxWtMp" alt="Figure5" loading="lazy"></p><ul>
 <li><strong><span>Live/Snap/Save</span></strong>
 <ul>
 <li><span>These buttons are at the core of the NPScope workflow, and should be familiar to users of previous versions.</span></li>
 <li><span>The </span><code>Live</code><span> button is first clicked to start live imaging. Once a representative image is observed, </span><code>Snap</code><span> is clicked to freeze the display and prepare the image for writing. </span><code>Save</code><span> simply saves the image file accordingly.</span></li>
 <li><span>These buttons are no longer deactivated to enforce a rigid workflow. The exception to this is the </span><code>Save</code><span> button, which will not be activated unless </span><code>Snap</code><span> is clicked first.</span></li>
 <li><span>The </span><code>Save</code><span> button also displays a message on the </span><code>Events Log</code><span> widget. Verify that the </span><a href="#File-Naming"><span>file name</span></a><span> is correct.</span></li>
+<li><span>Keyboard shortcuts are provided to help optimise workflow. </span><code>&lt;F1&gt;</code><span> maps to </span><code>Live</code><span>, </span><code>&lt;F2&gt;</code><span> maps to </span><code>Snap</code><span>, and </span><code>&lt;F3&gt;</code><span> maps to </span><code>Save</code><span>.</span></li>
 </ul>
 </li>
-</ul><h3 id="Events-Log" data-id="Events-Log"><a class="anchor hidden-xs" href="#Events-Log" title="Events-Log"><span class="octicon octicon-link"></span></a><span>Events Log</span></h3><p><img src="https://drive.google.com/uc?export=view&amp;id=1lWbvKmyOHjpE8s27W05HP0ZwlXC2ctMu" alt="Figure6" loading="lazy"></p><ul>
+</ul><h3 id="Events-Log" data-id="Events-Log"><a class="anchor hidden-xs" href="#Events-Log" title="Events-Log"><span class="octicon octicon-link"></span></a><span>Events Log</span></h3><p><img src="https://drive.google.com/uc?export=view&amp;id=1t1Yb5_80oHgeZ7kCcKPdBjIh27iR6n8j" alt="Figure6" loading="lazy"></p><ul>
 <li><strong><span>Scrollable Textbox (unnamed)</span></strong>
 <ul>
-<li><span>Displays confirmation and file saving messages.</span></li>
+<li><span>Displays output directory changes, confirmation, and file saving messages.</span></li>
 </ul>
 </li>
 </ul><hr><h2 id="Addendum" data-id="Addendum"><a class="anchor hidden-xs" href="#Addendum" title="Addendum"><span class="octicon octicon-link"></span></a><span>Addendum</span></h2><h3 id="File-Naming" data-id="File-Naming"><a class="anchor hidden-xs" href="#File-Naming" title="File-Naming"><span class="octicon octicon-link"></span></a><span>File Naming</span></h3><ul>
@@ -122,15 +122,34 @@
 <code>&lt;YYMMDDD&gt;-&lt;sample_type&gt;-&lt;UID&gt;-&lt;image_num&gt;.tif</code></li>
 <li><span>The field </span><code>&lt;sample_type&gt;</code><span> can take on the value </span><code>CTL</code><span> or </span><code>PAT</code><span>, referring to a control or patient sample respectively.</span></li>
 <li><span>The field </span><code>&lt;UID&gt;</code><span> refers to the unique identifier assigned to each control/patient sample. For controls, the UID will take on values </span><code>0000</code><span>, </span><code>0010</code><span>, </span><code>0040</code><span>, </span><code>0160</code><span>, or </span><code>0640</code><span>. For patient samples, the UID will be pulled from the specified </span><a href="#Google-Sheets"><span>Google Sheets</span></a><span>.</span></li>
-</ul><h3 id="Google-Sheets" data-id="Google-Sheets"><a class="anchor hidden-xs" href="#Google-Sheets" title="Google-Sheets"><span class="octicon octicon-link"></span></a><span>Google Sheets</span></h3><h4 id="Data-Pulldown" data-id="Data-Pulldown"><a class="anchor hidden-xs" href="#Data-Pulldown" title="Data-Pulldown"><span class="octicon octicon-link"></span></a><span>Data Pulldown</span></h4><ul>
+</ul><h3 id="Folder-Choice" data-id="Folder-Choice"><a class="anchor hidden-xs" href="#Folder-Choice" title="Folder-Choice"><span class="octicon octicon-link"></span></a><span>Folder Choice</span></h3><ul>
+<li><span>In short, simply pick one of the following folders: </span><code>Clinical</code><span>, </span><code>EBV20k</code><span>, or </span><code>R&amp;D</code><span>. A date-stamped folder will automatically be created within the user-selected folder.</span></li>
+<li><span>After selecting the correct folder, you should see a confirmation message being logged on the </span><code>Events Log</code><span>. Verify that the correct destination is set before proceeding.</span></li>
+<li><span>There should be </span><strong><span>no need to manually create a date-stamped folder</span></strong><span>.</span></li>
+<li><span>An example scenario:</span>
+<ul>
+<li><span>The folder </span><code>Clinical</code><span> was selected by the user as the output path. Images are captured on the 1st of January 2023.</span></li>
+<li><span>NPScope first automatically creates the folder </span><code>230101</code><span> within </span><code>Clinical</code><span> if it does not already exist.</span></li>
+<li><span>NPScope will then automatically save images within the folder </span><code>230101</code><span>. An example of such a directory structure would be as follows:</span></li>
+</ul>
+<pre><code>    ./EBV20k/
+        230101/
+            230101-CTL-0000-01.tif
+            230101-CTL-0000-02.tif
+            .
+            .
+            .
+</code></pre>
+</li>
+<li><span>If a folder is not provided, NPScope will disable saving and an error message will appear.</span></li>
+</ul><p><img src="https://drive.google.com/uc?export=view&amp;id=1os5mQ3MkThDto31ad_j08YpCTxLZqeA4" alt="Figure5" loading="lazy"></p><h3 id="Google-Sheets" data-id="Google-Sheets"><a class="anchor hidden-xs" href="#Google-Sheets" title="Google-Sheets"><span class="octicon octicon-link"></span></a><span>Google Sheets</span></h3><h4 id="Data-Pulldown" data-id="Data-Pulldown"><a class="anchor hidden-xs" href="#Data-Pulldown" title="Data-Pulldown"><span class="octicon octicon-link"></span></a><span>Data Pulldown</span></h4><ul>
 <li><span>Exact details of which patient data to pulldown are not handled by me. Please ask Ben for more information or if there are any issues with pulling patient data from Google Sheets.</span></li>
 <li><span>As of </span><em><span>16 January 2023</span></em><span>, here are the details that are relevant to users of NPScope: </span><strong><span>only rows with the current testing date will be pulled down</span></strong><span>. In other words, data will only be pulled from entries where the </span><code>Date Tested</code><span> column indicates today’s date.</span></li>
 </ul><h4 id="UID" data-id="UID"><a class="anchor hidden-xs" href="#UID" title="UID"><span class="octicon octicon-link"></span></a><span>UID</span></h4><ul>
 <li><span>Patient samples are identified by a four-character unique identifier (UID). This UID will be the last four characters of the patient’s NRIC if given. Otherwise, the UID will be a </span><a href="https://www.translatorscafe.com/unit-converter/en-US/numbers/3-29/decimal-base-26/" target="_blank" rel="noopener"><span>base26</span></a><span> representation of the decimal number given to the patient (e.g., the running integer code used by NUH: </span><code>NU124</code><span> or </span><code>NU20000</code><span>)</span></li>
 <li><span>The UID generation is handled on the Google Sheet’s side (</span><code>UID List</code><span>) and NPScope simply pulls the relevant data down.</span></li>
 </ul><h3 id="Synology-FileStation" data-id="Synology-FileStation"><a class="anchor hidden-xs" href="#Synology-FileStation" title="Synology-FileStation"><span class="octicon octicon-link"></span></a><span>Synology FileStation</span></h3><ul>
-<li><span>In order to facilitate image analysis, images are automatically saved into a shared Synology FileStation.</span></li>
-<li><span>The default location is </span><code>/PN-slides/slides</code><span> on Synology.</span></li>
+<li><span>In order to facilitate image analysis, images are to be saved into a shared Synology FileStation.</span></li>
 </ul><hr><h2 id="Patch-Notes" data-id="Patch-Notes"><a class="anchor hidden-xs" href="#Patch-Notes" title="Patch-Notes"><span class="octicon octicon-link"></span></a><span>Patch Notes</span></h2><h4 id="4000" data-id="4000"><a class="anchor hidden-xs" href="#4000" title="4000"><span class="octicon octicon-link"></span></a><span>4.0.00</span></h4><ul>
 <li><span>NPScope migrated from Python 2.7 to Python 3.10.4</span></li>
 <li><span>Micro-Manager upgraded from 1.4 to 2.0.</span></li>
@@ -147,6 +166,21 @@
 <li><span>Error handling added for when users try to snap an image although the camera failed to initialise.</span></li>
 <li><span>Error handling added for when no data is selected on Google Sheets (i.e. </span><code>UID List</code><span> is empty).</span></li>
 <li><span>Outstanding issues: proper closing of the NPScopeApp to be implemented: right now </span><code>Tkinter</code><span> is in charge of closing all outstanding tasks.</span></li>
+</ul><h4 id="4002" data-id="4002"><a class="anchor hidden-xs" href="#4002" title="4002"><span class="octicon octicon-link"></span></a><span>4.0.02</span></h4><ul>
+<li><span>NPScopeApp should close properly with no side effects now.</span></li>
+<li><span>This User Guide can now be opened from within NPScope.</span></li>
+<li><span>Ben raised an issue where NPScope would occasionally save images in the same directory as the </span><code>NPScopeApp.py</code><span> script.</span>
+<ul>
+<li><span>Steps to recreate this issue: when opening the filedialog by clicking </span><code>Set Output Path</code><span>, the user might click “Cancel” instead of actually selecting any destination folder.</span></li>
+<li><span>Tkinter’s </span><code>filedialog.askdirectory</code><span> returns an </span><a href="https://stackoverflow.com/questions/15010461/askopenfilename-handling-cancel-on-dialogue" target="_blank" rel="noopener"><span>empty string if this occurs</span></a><span>. When joining an empty string with the date-stamped folder, </span><code>os.path.join</code><span> discards all invalid strings and </span><a href="https://docs.python.org/3/library/os.path.html#os.path.join" target="_blank" rel="noopener"><span>simply starts from the current working directory</span></a><span>.</span></li>
+<li><span>In other words, </span><code>os.path.join("", "230101")</code><span> would result in </span><code>./230101</code><span>.</span></li>
+<li><span>Empty strings are now handled.</span></li>
+</ul>
+</li>
+<li><span>Users would either save images in the default location (and fail to move them to the correct folders later) or manually create and name date-stamped folders, resulting in nested duplicates. A default location is now removed. Users must now consciously select a destination folder for image saving.</span></li>
+<li><span>The events log now updates when an output folder is selected.</span></li>
+<li><span>User Guide rewritten to make the point on automatic date-stamped folder creation more clear (hopefully).</span></li>
+<li><span>Camera settings are enforced via Micro-Manager upon every startup. More information on what led to this change will not be detailed here.</span></li>
 </ul></div>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
@@ -155,22 +189,24 @@
             </a>
             <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
                 <div class="toc"><ul class="nav">
-<li class=""><a href="#NPScope-User-Guide" title="NPScope User Guide">NPScope User Guide</a><ul class="nav">
-<li class=""><a href="#Quick-Start" title="Quick Start">Quick Start</a></li>
-<li class=""><a href="#Widgets" title="Widgets">Widgets</a><ul class="nav">
-<li class=""><a href="#Settings-Menu" title="Settings Menu">Settings Menu</a></li>
-<li class=""><a href="#Input-sample-details" title="Input sample details">Input sample details</a></li>
-<li class=""><a href="#Main-Workflow" title="Main Workflow">Main Workflow</a></li>
-<li class=""><a href="#Events-Log" title="Events Log">Events Log</a></li>
+<li><a href="#NPScope-User-Guide" title="NPScope User Guide">NPScope User Guide</a><ul class="nav">
+<li><a href="#Quick-Start" title="Quick Start">Quick Start</a></li>
+<li><a href="#Widgets" title="Widgets">Widgets</a><ul class="nav">
+<li><a href="#Settings-Menu" title="Settings Menu">Settings Menu</a></li>
+<li><a href="#Help-Menu" title="Help Menu">Help Menu</a></li>
+<li><a href="#Input-sample-details" title="Input sample details">Input sample details</a></li>
+<li><a href="#Main-Workflow" title="Main Workflow">Main Workflow</a></li>
+<li><a href="#Events-Log" title="Events Log">Events Log</a></li>
 </ul>
 </li>
 <li><a href="#Addendum" title="Addendum">Addendum</a><ul class="nav">
 <li><a href="#File-Naming" title="File Naming">File Naming</a></li>
+<li><a href="#Folder-Choice" title="Folder Choice">Folder Choice</a></li>
 <li><a href="#Google-Sheets" title="Google Sheets">Google Sheets</a></li>
 <li><a href="#Synology-FileStation" title="Synology FileStation">Synology FileStation</a></li>
 </ul>
 </li>
-<li class=""><a href="#Patch-Notes" title="Patch Notes">Patch Notes</a></li>
+<li><a href="#Patch-Notes" title="Patch Notes">Patch Notes</a></li>
 </ul>
 </li>
 </ul>
@@ -180,22 +216,24 @@
     </div>
     <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
         <div class="toc"><ul class="nav">
-<li class=""><a href="#NPScope-User-Guide" title="NPScope User Guide">NPScope User Guide</a><ul class="nav">
-<li class=""><a href="#Quick-Start" title="Quick Start">Quick Start</a></li>
-<li class=""><a href="#Widgets" title="Widgets">Widgets</a><ul class="nav">
-<li class=""><a href="#Settings-Menu" title="Settings Menu">Settings Menu</a></li>
-<li class=""><a href="#Input-sample-details" title="Input sample details">Input sample details</a></li>
-<li class=""><a href="#Main-Workflow" title="Main Workflow">Main Workflow</a></li>
-<li class=""><a href="#Events-Log" title="Events Log">Events Log</a></li>
+<li><a href="#NPScope-User-Guide" title="NPScope User Guide">NPScope User Guide</a><ul class="nav">
+<li><a href="#Quick-Start" title="Quick Start">Quick Start</a></li>
+<li><a href="#Widgets" title="Widgets">Widgets</a><ul class="nav">
+<li><a href="#Settings-Menu" title="Settings Menu">Settings Menu</a></li>
+<li><a href="#Help-Menu" title="Help Menu">Help Menu</a></li>
+<li><a href="#Input-sample-details" title="Input sample details">Input sample details</a></li>
+<li><a href="#Main-Workflow" title="Main Workflow">Main Workflow</a></li>
+<li><a href="#Events-Log" title="Events Log">Events Log</a></li>
 </ul>
 </li>
 <li><a href="#Addendum" title="Addendum">Addendum</a><ul class="nav">
 <li><a href="#File-Naming" title="File Naming">File Naming</a></li>
+<li><a href="#Folder-Choice" title="Folder Choice">Folder Choice</a></li>
 <li><a href="#Google-Sheets" title="Google Sheets">Google Sheets</a></li>
 <li><a href="#Synology-FileStation" title="Synology FileStation">Synology FileStation</a></li>
 </ul>
 </li>
-<li class=""><a href="#Patch-Notes" title="Patch Notes">Patch Notes</a></li>
+<li><a href="#Patch-Notes" title="Patch Notes">Patch Notes</a></li>
 </ul>
 </li>
 </ul>
